@@ -1,0 +1,23 @@
+/**{
+	border:solid 0px blue;
+}*/
+
+div.desc{
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+}
+
+.fix{
+    width: 100%;
+    padding: 0px;
+    position: relative;
+
+}
+.error{
+    color:red;
+}

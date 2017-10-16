@@ -1,0 +1,40 @@
+{%extends "baseClean.html" %}
+{%block content%}
+<h2>User sign Up</h2>
+<form method="POST">
+	Email:<input type="text" name="email" value="{{email}}" placeholder="Email">
+	<br>
+	<label>Hint: Email address.</label>
+	<br>
+	<label class="error">&nbsp{{error_email}}</label>
+	<br>
+
+	Name:<input type="text" name="username" value="{{username}}" placeholder="Name">
+	<br>
+	<label>Hint: Use 2 - 20 characters, letters and numbers only</label>
+	<br>
+	<label class="error">&nbsp{{error_username}}</label>
+	<br>
+	
+
+	Password:<input type="password" name="password" value="" placeholder="Password">
+	<br>
+	<label>Hint: Use 8 - 20 digits</label>
+	<br>
+	<label class="error">&nbsp{{error_password}}</label>
+	<br>
+
+	Verification:<input type="password" name="verify" value="" placeholder="Repeat Password">
+	<br>
+	<label>Hint: Repeat the password</label>
+	<br>
+	<label class="error">&nbsp{{error_verify}}</label>
+	<br>
+
+	<input type="submit" value = "Submit">
+	<a href="{{request.referrer}}"><button type="button">Back</button></a>
+
+</form>
+
+{%endblock%}
+

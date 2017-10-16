@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12">
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-10 col-sm-9 col-xs-6"><strong>Product Detail</strong></div>
+	{%if isOwner%}
+	<div class="col-md-2 col-sm-3 col-xs-6"><a href="{{request.path}}edit"><button>Edit</button></a></div>	
+	{%endif%}
+</div>
+<div class="row">
+	<div class="col-md-4 col-sm-4 col-xs-4">Name:</div>
+	<div class="col-md-8 col-sm-8 col-xs-8">{{product.name.capitalize()}}</div>
+</div>
+<div class="row">
+	<div class="col-md-4 col-sm-4 col-xs-4">Category:</div>
+	<div class="col-md-8 col-sm-8 col-xs-8">{{product.category.name.capitalize()}}</div>
+</div>
+<div class="row">
+	<div class="col-md-4 col-sm-4 col-xs-4">Price:</div>
+	<div class="col-md-8 col-sm-8 col-xs-8">{{"$" + product.price if product.price else "Not specified"}}</div>
+</div>
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">Description:</div>
+</div>
+<div class="row">
+	<div class="col-md-11 col-sm-11 col-xs-11" style="margin-left: 25px"><pre>{{product.description}}</pre>&nbsp</div>
+</div>
+<div class="row">
+<!-- 	<div class="col-md-12"><img src="http://placehold.it/150x150"></div>
+ --></div>
+<div class = "row">
+	<div class="col-md-4">Created by user:</div>
+	<div class="col-md-8">&nbsp{{product.owner.username}}</div>
+</div>
+<a href="../products">Back</a>
+<!-- {{product.__dict__}}
+ -->{% endblock %}
