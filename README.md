@@ -1,38 +1,54 @@
-# FSNDP4 Full Stack Nano Degree Project 4 : Catalog App
+# FSNDP Full Stack Nano Degree Project: Catalog App on Linux Server
 
-This project is a catalog app, which people can view catalog and products but only logged in user can create new product.
+The project deployed the catalog app built in previously on to a AWS lightsail server.
+
+In the catalog app, people can view catalog and products but only logged in user can create new product.
 the creater of a product will be able to delete and modify the product.
 
 administrator would have full access to every product,
-and extra previlage to create/edit/delete categories.
+and previlage to create/edit/delete categories.
 
 
-## Prerequisites
-* Install VirtialBox and Vagrant
+## IP address & SSH PORT
+* IP: 54.79.26.233
 
-* Use a command line console which supports SSH (Linux commandline or git bash)
+* PORT: 2200
 
-## Getting Started
-* clone the repository to your local machine
-* in command line window, navigate to the repository
-* Change directory to the directory which has Vagrantfile in it, and run
-```
-vagrant up
-```
-* If vagrant is up successfully, run
-```
-vagrant ssh
-```
-* After you login with ssh, change directory by typing:
-```
-cd /vagrant/fsndp4
-```
+## Complete Url to the app
+http://54.79.26.233
 
-### Running on localhost
-if you are running localhost on port 8000
-your starting page will be:
 
-* [http://localhost:8000/](http://localhost:8000/)
+## Installed software
+
+* finger 
+* PostgreSQL
+* git
+* apache
+* libapache2-mod-wsgi
+        updated sites-enabled/000-default.conf
+        Change: WSGIScriptAlias / /var/www/server/catalog.wsgi
+* python2.7
+* python-pip
+
+
+### python lib
+* httplib2
+* flask
+* oauth2client
+* requests
+* sqlalchemy
+* psycopg2
+
+## List of third-party resources
+https://www.postgresql.org
+http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
+https://modwsgi.readthedocs.io/en/develop/#
+https://stackoverflow.com
+Udacity Forum
+
+## grader ssh key
+/home/grader/.ssh/grader
+
 
 ## Viewing as Admin
 The database has been pre configured to have an admin user.
@@ -42,9 +58,8 @@ admin@catalogapp.com
 ```
 and the password is 
 ```
-11111111
+adminadmin
 ```
-If you plan to start fresh, you need to sign up with this email address immediately.
 
 ### Permission
 As admin, you will have
@@ -56,7 +71,6 @@ Delete Category in Edit Category, it will delete all products under it. (admin o
 Admin also has the permission to control all product even if it is created by others
 
 ```
-
 
 ## Viewing as a guest
 
