@@ -25,8 +25,11 @@ http://54.79.26.233
 * git
 * apache
 * libapache2-mod-wsgi
+
         updated sites-enabled/000-default.conf
+        
         Change: WSGIScriptAlias / /var/www/server/catalog.wsgi
+        
 * python2.7
 * python-pip
 
@@ -41,14 +44,20 @@ http://54.79.26.233
 
 ## List of third-party resources
 https://www.postgresql.org
+
 http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
+
 https://modwsgi.readthedocs.io/en/develop/#
+
 https://stackoverflow.com
+
 Udacity Forum
 
 ## grader ssh key
 /home/grader/.ssh/grader
 
+
+# Detail on how to use the app
 
 ## Viewing as Admin
 The database has been pre configured to have an admin user.
